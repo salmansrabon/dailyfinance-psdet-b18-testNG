@@ -1,5 +1,6 @@
 package utils;
 
+import models.UserModel;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -11,18 +12,18 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class JSONManager {
-    public static void saveJSONData(String firstName, String lastName, String email, String password, String phoneNumber, String address) throws IOException, ParseException {
+    public static void saveJSONData(UserModel userModel) throws IOException, ParseException {
         String fileUrl="./src/test/resources/users.json";
         JSONParser parser=new JSONParser();
         JSONArray jsonArray= (JSONArray) parser.parse(new FileReader(fileUrl));
 
         JSONObject jsonObject=new JSONObject();
-        jsonObject.put("firstName",firstName);
-        jsonObject.put("lastName",lastName);
-        jsonObject.put("email",email);
-        jsonObject.put("password",password);
-        jsonObject.put("phoneNumber",phoneNumber);
-        jsonObject.put("address",address);
+        jsonObject.put("firstName",userModel.getFirstname());
+        jsonObject.put("lastName",userModel.getLastname());
+        jsonObject.put("email",userModel.getEmail());
+        jsonObject.put("password",userModel.getPassword());
+        jsonObject.put("phoneNumber",userModel.getPhonenumber());
+        jsonObject.put("address",userModel.getAddress());
 
         jsonArray.add(jsonObject);
 
