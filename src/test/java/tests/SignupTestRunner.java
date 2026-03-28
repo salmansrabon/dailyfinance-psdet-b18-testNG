@@ -13,7 +13,7 @@ import utils.RandomNumber;
 import java.io.IOException;
 
 public class SignupTestRunner extends BaseTest {
-    @Test
+    @Test(priority = 1,description = "Signup user by all fields")
     public void signup() throws IOException, ParseException {
         Faker faker=new Faker();
         SignupPage signupPage=new SignupPage(driver);
@@ -24,6 +24,20 @@ public class SignupTestRunner extends BaseTest {
         userModel.setPassword("1234");
         userModel.setPhonenumber("0150"+RandomNumber.generateRandomNumber(1000000,9999999));
         userModel.setAddress("Dhaka");
+
+        driver.findElement(By.partialLinkText("Register")).click();
+        signupPage.doSignup(userModel);
+        JSONManager.saveJSONData(userModel);
+    }
+    @Test(priority = 2, description = "Signup with mandatory fields only")
+    public void signup_mandatory() throws IOException, ParseException {
+        Faker faker=new Faker();
+        SignupPage signupPage=new SignupPage(driver);
+        UserModel userModel=new UserModel();
+        userModel.setFirstname(faker.name().firstName());
+        userModel.setEmail("salmansrabon+"+ RandomNumber.generateRandomNumber(1000,9999) +"@gmail.com");
+        userModel.setPassword("1234");
+        userModel.setPhonenumber("0150"+RandomNumber.generateRandomNumber(1000000,9999999));
 
         driver.findElement(By.partialLinkText("Register")).click();
         signupPage.doSignup(userModel);

@@ -21,11 +21,11 @@ public class SignupPage {
     }
     public void doSignup(UserModel userModel){
         driver.findElement(txtFirstName).sendKeys(userModel.getFirstname());
-        driver.findElement(txtLastName).sendKeys(userModel.getLastname());
+        driver.findElement(txtLastName).sendKeys(userModel.getLastname()==null?"": userModel.getLastname());
         driver.findElement(txtEmail).sendKeys(userModel.getEmail());
         driver.findElement(txtPassword).sendKeys(userModel.getPassword());
         driver.findElement(txtPhoneNumber).sendKeys(userModel.getPhonenumber());
-        driver.findElement(txtAddress).sendKeys(userModel.getAddress());
+        driver.findElement(txtAddress).sendKeys(userModel.getAddress()==null?"": userModel.getAddress());
         driver.findElements(rbGender).get(0).click();
         driver.findElement(chkTerms).click();
         driver.findElement(btnRegister).click();

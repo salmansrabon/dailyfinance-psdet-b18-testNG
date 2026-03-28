@@ -1,18 +1,1 @@
-[
-  {
-    "firstName": "Milagro",
-    "lastName": "Schultz",
-    "password": "1234",
-    "phoneNumber": "01506729617",
-    "address": "Dhaka",
-    "email": "salmansrabon+9976@gmail.com"
-  },
-  {
-    "firstName": "Nathalie",
-    "lastName": "Padberg",
-    "password": "1234",
-    "phoneNumber": "01507285043",
-    "address": "Dhaka",
-    "email": "salmansrabon+7199@gmail.com"
-  }
-]
+[{"firstName":"Milagro","lastName":"Schultz","password":"1234","phoneNumber":"01506729617","address":"Dhaka","email":"salmansrabon+9976@gmail.com"},{"firstName":"Nathalie","lastName":"Padberg","password":"1234","phoneNumber":"01507285043","address":"Dhaka","email":"salmansrabon+7199@gmail.com"},{"firstName":"Nelle","password":"1234","phoneNumber":"01506030676","email":"salmansrabon+8051@gmail.com"},{"firstName":"Celesta","password":"1234","phoneNumber":"01503208885","email":"salmansrabon+6050@gmail.com"},{"firstName":"Ronnie","password":"1234","phoneNumber":"01504969336","email":"salmansrabon+3305@gmail.com"},{"firstName":"Junita","password":"1234","phoneNumber":"01509655207","email":"salmansrabon+3862@gmail.com"},{"firstName":"Rima","password":"1234","phoneNumber":"01509532344","email":"salmansrabon+3441@gmail.com"},{"firstName":"Anabel","password":"1234","phoneNumber":"01504628355","email":"salmansrabon+2724@gmail.com"},{"firstName":"Andree","password":"1234","phoneNumber":"01506981412","email":"salmansrabon+6443@gmail.com"}]

@@ -19,11 +19,11 @@ public class JSONManager {
 
         JSONObject jsonObject=new JSONObject();
         jsonObject.put("firstName",userModel.getFirstname());
-        jsonObject.put("lastName",userModel.getLastname());
+        //jsonObject.put("lastName",userModel.getLastname());
         jsonObject.put("email",userModel.getEmail());
         jsonObject.put("password",userModel.getPassword());
         jsonObject.put("phoneNumber",userModel.getPhonenumber());
-        jsonObject.put("address",userModel.getAddress());
+        //jsonObject.put("address",userModel.getAddress());
 
         jsonArray.add(jsonObject);
 
@@ -32,5 +32,18 @@ public class JSONManager {
         fileWriter.flush();
         fileWriter.close();
 
+    }
+    public static JSONArray getJSONArray() throws IOException, ParseException {
+        String fileUrl="./src/test/resources/users.json";
+        JSONParser parser=new JSONParser();
+        JSONArray jsonArray= (JSONArray) parser.parse(new FileReader(fileUrl));
+        return jsonArray;
+    }
+    public static JSONObject getLastJSONObject() throws IOException, ParseException {
+        String fileUrl="./src/test/resources/users.json";
+        JSONParser parser=new JSONParser();
+        JSONArray jsonArray= (JSONArray) parser.parse(new FileReader(fileUrl));
+        JSONObject jsonObject= (JSONObject) jsonArray.get(jsonArray.size()-1);
+        return jsonObject;
     }
 }
