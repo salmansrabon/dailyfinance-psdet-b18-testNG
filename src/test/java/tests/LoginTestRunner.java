@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 
 public class LoginTestRunner extends BaseTest {
-    @Test(priority = 1, description = "Check if user can login with wrong creds")
+    @Test(priority = 1, description = "Check if user can login with wrong creds", groups = "smoke")
     public void userLoginWithWrongCreds(){
         LoginPage loginPage=new LoginPage(driver);
         loginPage.userLogin("admin@test.com","wrongpass");

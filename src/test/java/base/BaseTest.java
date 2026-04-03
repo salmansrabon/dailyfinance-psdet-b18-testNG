@@ -10,14 +10,14 @@ import java.time.Duration;
 
 public class BaseTest {
     public WebDriver driver;
-    @BeforeTest
+    @BeforeTest(groups = "smoke")
     public void setup(){
         driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.get(ConfigReader.getInstance().get("baseUrl"));
     }
-    @AfterTest
+    @AfterTest(groups = "smoke")
     public void tearDown(){
         driver.quit();
     }

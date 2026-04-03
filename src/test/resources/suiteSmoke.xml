@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<suite name="Daily finance automation regression suite">
+<suite name="Daily finance automation smoke suite">
     <test name="User Registration">
+        <groups>
+            <run>
+                <include name="smoke"></include>
+            </run>
+        </groups>
         <classes>
             <class name="tests.SignupTestRunner"></class>
         </classes>
     </test>
     <test name="Admin Login">
+        <groups>
+            <run>
+                <include name="smoke"></include>
+            </run>
+        </groups>
         <classes>
             <class name="tests.LoginTestRunner"></class>
         </classes>
     </test>
     <test name="User Add new cost">
+        <groups>
+            <run>
+                <include name="smoke"></include>
+            </run>
+        </groups>
         <classes>
             <class name="tests.UserTestRunner"></class>
         </classes>

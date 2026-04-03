@@ -15,7 +15,7 @@ import utils.RandomNumber;
 import java.io.IOException;
 
 public class SignupTestRunner extends BaseTest {
-    @Test(priority = 1,description = "Signup user by all fields")
+    @Test(priority = 1,description = "Signup user by all fields", groups = "smoke")
     public void signup() throws IOException, ParseException, InterruptedException {
         Faker faker=new Faker();
         SignupPage signupPage=new SignupPage(driver);
